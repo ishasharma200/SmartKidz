@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartGrow AI | Storytelling for Curious Kids</title>
+    <meta
+      name="description"
+      content="SmartGrow AI helps children learn through stories, rhymes, interactive quizzes and playful activities."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="SmartGrow AI home">
+          <div class="brand-mark">🌱</div>
+          <div class="brand-copy">
+            <span class="brand-name">SmartGrow AI</span>
+            <span class="brand-tag">Storytelling for curious minds</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#stories">Stories</a>
+          <a href="#rhymes">Rhymes</a>
+          <a href="#learning">Learning</a>
+          <a href="#parent-dashboard">Parents</a>
+        </nav>
+
+        <button class="primary small" type="button" id="headerGenerateBtn">Create story</button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">AI Smart Storyteller</span>
+            <h1>Less mindless scrolling. More learning, imagination, and real-world discovery.</h1>
+            <p>
+              Personalized stories, poems, quiz prompts, and gentle activities designed for children
+              ages 5 to 8.
+            </p>
+
+            <div class="hero-actions">
+              <button class="primary" type="button" id="generateStoryBtn">Generate story</button>
+              <button class="secondary" type="button" id="generatePoemBtn">Poem time</button>
+            </div>
+
+            <div class="mini-pills" aria-label="Key features">
+              <span>📚 Stories</span>
+              <span>🎵 Rhymes</span>
+              <span>🧠 Quizzes</span>
+              <span>🔊 Audio</span>
+            </div>
+          </div>
+
+          <div class="hero-preview" aria-label="Story preview panel">
+            <div class="preview-card">
+              <div class="preview-heading">
+                <div>
+                  <p class="eyebrow small">Featured</p>
+                  <h2 id="previewTitle">The Kindness Lantern</h2>
+                </div>
+                <span class="tag" id="previewTag">Kindness</span>
+              </div>
+
+              <div class="preview-story-box">
+                <div class="scene-art" id="sceneArt" aria-hidden="true">
+                  <div class="sun"></div>
+                  <div class="hill hill-one"></div>
+                  <div class="hill hill-two"></div>
+                  <div class="figure figure-one">🐰</div>
+                  <div class="figure figure-two">🌼</div>
+                </div>
+                <div class="preview-copy" id="previewCopy">
+                  Maya the rabbit learns that sharing warm light makes the whole forest feel braver.
+                </div>
+              </div>
+
+              <div class="preview-actions">
+                <button class="primary small" type="button" id="previewListenBtn">Listen</button>
+                <button class="ghost small" type="button" id="previewQuizBtn">Quiz</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="controls panel" aria-label="Story controls">
+          <div class="control-group">
+            <label for="ageSelect">Age</label>
+            <select id="ageSelect">
+              <option value="5-6">5-6 years</option>
+              <option value="6-7">6-7 years</option>
+              <option value="7-8">7-8 years</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Tamil">Tamil</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="categorySelect">Category</label>
+            <select id="categorySelect">
+              <option value="Kindness">Kindness</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Animals">Animals</option>
+              <option value="Nature">Nature</option>
+              <option value="Courage">Courage</option>
+              <option value="Learning">Learning</option>
+            </select>
+          </div>
+
+          <button class="primary" type="button" id="applyFiltersBtn">Apply</button>
+        </section>
+
+        <section class="studio-layout" id="stories">
+          <div class="panel story-studio">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow small">Story studio</p>
+                <h3>Build a new story</h3>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="contentTypeSelect">Content type</label>
+                <select id="contentTypeSelect">
+                  <option value="story">Story</option>
+                  <option value="poem">Poem &amp; rhyme</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="themeInput">Theme</label>
+                <input id="themeInput" type="text" value="Kindness" placeholder="e.g. bravery, helping, nature" />
+              </div>
+
+              <div class="field">
+                <label for="heroInput">Main character</label>
+                <input id="heroInput" type="text" value="Rabbit" placeholder="Rabbit, fox, bear..." />
+              </div>
+            </div>
+
+            <button class="primary wide" type="button" id="customGenerateBtn">Generate now</button>
+          </div>
+
+          <div class="panel story-viewer" id="learning">
+            <div class="viewer-header">
+              <div>
+                <p class="eyebrow small">Now reading</p>
+                <h3 id="viewerTitle">The Kindness Lantern</h3>
+              </div>
+              <button class="secondary small" type="button" id="speakBtn">🔊 Listen</button>
+            </div>
+
+            <div class="reading-box">
+              <div class="artwork-panel" id="artworkPanel" aria-hidden="true">
+                <div class="art-sun"></div>
+                <div class="art-cloud cloud-one"></div>
+                <div class="art-cloud cloud-two"></div>
+                <div class="art-tree"></div>
+                <div class="art-figure">🐰</div>
+              </div>
+
+              <article class="story-text" id="storyBody">
+                In a quiet forest, a little rabbit named Maya found a glowing lantern under a fern. It was not a
+                magical lantern at all, but it made every small kindness look brighter. When Maya shared the warm
+                light with her friends, they found the courage to help others too.
+              </article>
+
+              <div class="moral-box">
+                <span class="label">Learning moment</span>
+                <p id="storyMoral">Kindness grows brighter when it is shared with others.</p>
+              </div>
+            </div>
+
+            <div class="quiz-box" id="quizBox">
+              <h4>Quick quiz</h4>
+              <ul id="quizList">
+                <li><button type="button" class="option-btn" data-correct="true">The lantern made kindness brighter.</button></li>
+                <li><button type="button" class="option-btn">The forest became noisy.</button></li>
+                <li><button type="button" class="option-btn">Maya hid the lantern.</button></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="library-section" id="rhymes">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow small">Curated collection</p>
+              <h3>Explore stories and rhymes</h3>
+            </div>
+            <button class="ghost" type="button">View all</button>
+          </div>
+
+          <div class="library-grid" id="libraryGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="dashboard-grid" id="parent-dashboard">
+          <div class="panel dashboard-panel">
+            <p class="eyebrow small">Learning checkpoints</p>
+            <h3>What children are practicing</h3>
+            <ul class="metrics-list">
+              <li><span>Vocabulary</span><strong>14 new words</strong></li>
+              <li><span>Listening</span><strong>8 stories this week</strong></li>
+              <li><span>Confidence</span><strong>82% quiz score</strong></li>
+              <li><span>Creativity</span><strong>3 drawing prompts</strong></li>
+            </ul>
+          </div>
+
+          <div class="panel dashboard-panel accent-panel">
+            <p class="eyebrow small">Parent dashboard</p>
+            <h3>Healthy digital time</h3>
+            <div class="progress-wrap">
+              <div class="progress-row">
+                <span>Story time</span>
+                <strong>18 min</strong>
+              </div>
+              <div class="progress-bar"><span style="width: 72%"></span></div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-row">
+                <span>Poem breaks</span>
+                <strong>10 min</strong>
+              </div>
+              <div class="progress-bar"><span style="width: 58%"></span></div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-row">
+                <span>Offline activity</span>
+                <strong>2 tasks</strong>
+              </div>
+              <div class="progress-bar"><span style="width: 80%"></span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>SmartGrow AI</span>
+        <span>Designed for safe, meaningful learning.</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

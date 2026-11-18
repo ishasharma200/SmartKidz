@@ -28,6 +28,7 @@
         </div>
 
         <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
           <a href="#stories">Stories</a>
           <a href="#rhymes">Rhymes</a>
           <a href="#learning">Learning</a>
@@ -38,6 +39,53 @@
       </header>
 
       <main>
+        <section class="learning-hub" id="home" aria-labelledby="hubTitle">
+          <div class="section-title-row hub-heading">
+            <div>
+              <p class="eyebrow small">Your learning spaces</p>
+              <h2 id="hubTitle">What would you like to explore?</h2>
+            </div>
+            <p class="hub-intro">Choose a space to learn, play, and discover beyond the screen.</p>
+          </div>
+
+          <div class="module-grid">
+            <a class="module-card module-card-ready" href="#stories">
+              <span class="module-icon" aria-hidden="true">📚</span>
+              <span class="module-status">Ready to explore</span>
+              <span class="module-title">Smart Storyteller</span>
+              <span class="module-description">Stories, poems, narration, and quick quizzes.</span>
+            </a>
+
+            <article class="module-card module-card-planned" aria-label="Play and Learn, planned">
+              <span class="module-icon" aria-hidden="true">🧩</span>
+              <span class="module-status">Coming in a future step</span>
+              <span class="module-title">Play &amp; Learn</span>
+              <span class="module-description">Mini-games for numbers, letters, shapes, and memory.</span>
+            </article>
+
+            <article class="module-card module-card-planned" aria-label="Talking Buddy, planned">
+              <span class="module-icon" aria-hidden="true">💬</span>
+              <span class="module-status">Coming in a future step</span>
+              <span class="module-title">Talking Buddy</span>
+              <span class="module-description">A safe, friendly space for curious questions.</span>
+            </article>
+
+            <article class="module-card module-card-planned" aria-label="Screen-to-Real-World, planned">
+              <span class="module-icon" aria-hidden="true">🌿</span>
+              <span class="module-status">Coming in a future step</span>
+              <span class="module-title">Real-World Explorer</span>
+              <span class="module-description">Creative challenges that take learning off-screen.</span>
+            </article>
+
+            <a class="module-card module-card-demo" href="#parent-dashboard">
+              <span class="module-icon" aria-hidden="true">👪</span>
+              <span class="module-status">Demo preview</span>
+              <span class="module-title">Parent Space</span>
+              <span class="module-description">A preview of progress and healthy-time reporting.</span>
+            </a>
+          </div>
+        </section>
+
         <section class="hero">
           <div class="hero-copy">
             <span class="eyebrow">AI Smart Storyteller</span>
@@ -213,7 +261,8 @@
         <section class="dashboard-grid" id="parent-dashboard">
           <div class="panel dashboard-panel">
             <p class="eyebrow small">Learning checkpoints</p>
-            <h3>What children are practicing</h3>
+            <h3>Example learning summary</h3>
+            <p class="dashboard-demo-note">Sample values for the interface preview — not a child's real activity.</p>
             <ul class="metrics-list">
               <li><span>Vocabulary</span><strong>14 new words</strong></li>
               <li><span>Listening</span><strong>8 stories this week</strong></li>
@@ -223,8 +272,9 @@
           </div>
 
           <div class="panel dashboard-panel accent-panel">
-            <p class="eyebrow small">Parent dashboard</p>
+            <p class="eyebrow small">Parent dashboard demo</p>
             <h3>Healthy digital time</h3>
+            <p class="dashboard-demo-note">These sample values will be replaced with parent-managed settings and saved activity.</p>
             <div class="progress-wrap">
               <div class="progress-row">
                 <span>Story time</span>
@@ -252,7 +302,7 @@
 
       <footer class="site-footer">
         <span>SmartGrow AI</span>
-        <span>Designed for safe, meaningful learning.</span>
+        <span>Frontend prototype · Designed for safe, meaningful learning.</span>
       </footer>
     </div>
 
